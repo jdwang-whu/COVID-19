@@ -1,0 +1,53 @@
+#container{
+    position: relative;
+    margin: 20px;
+    height: 500;
+}
+#left{
+    position: absolute;
+    top:0px;  
+    left:0px;  
+    border:solid 2px #FFF;  
+    width:300px;  
+    height:100%;
+}
+
+#middle{
+    margin:0px 370px 0px 320px;  
+    border:solid 2px #FFF;  
+    height:100%; 
+}
+
+#right{
+    position: absolute;
+    top:0px;  
+    right:0px;  
+    border:solid 2px #FFF;  
+    width:350px;  
+    height:100%;
+}
+#map{
+    margin: 0px 80px 0px 80px;
+    padding: 20px 0px 20px 0px;
+    height: calc(100vh - 90px);
+}
+#fieldset{
+    margin: 5px 5px 5px 5px;
+    color: honeydew;
+}
+.result{
+    margin: 10px 5px 15px 5px;
+    padding: 0px 5px 0px 5px;
+    color: honeydew;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+#line_hubei{
+    margin: 5px 10px 5px 5px;
+    height: 300px;
+}
+#line_zhejiang{
+    margin: 5px 10px 5px 5px;
+    height: 300px;
+}

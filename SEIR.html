@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>新冠肺炎推演</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <!-- 引入 echarts.js -->
+        <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    </head>
+    <body background="image/background.jpg">
+        <div id="container">
+            <div id="left">
+                <fieldset id="fieldset">
+                    <legend>SEIR模型参数输入</legend>
+                    城市总人口: </br><input id="S" type="number" value="59170000"></br>
+                    潜伏期患者数: </br><input id="E" type="number" value="4007"></br>
+                    当前感染患者: </br><input id="I" type="number" value="786"></br>
+                    康复患者数: </br><input id="R" type="number" value="31"></br>
+                    易感人群隔离数: </br><input id="Sq" type="number" value="2776"></br>
+                    潜伏期隔离数：</br><input id="Eq" type="number" value="400"></br>
+                    隔离治疗患者数： </br><input id="H" type="number" value="1186"></br>
+                    </br>
+                    <button onclick="save()">保存初始值</button>
+                    </br></br>
+                    口罩普及率：<input id="mask" type="range" name="mask" min="0" max="1" step="0.1" value="0"></br></br>
+                    隔离速率：<input id="isolation" type="range" name="isolation" min="0" max="1" step="0.02" value="0.14"></br></br>
+                    传染力度：<input type="radio" name="infect" value="2019-nCoV" checked>2019-nCoV 
+                    <input type="radio" name="infect" value="SARS" >SARS</br></br>
+                    <button onclick="SEIR_prediction()">计算结果</button>
+                </fieldset>
+                
+            </div>
+            <div id="middle">
+                <div id="map">
+                    <script src="SEIR.js"></script>
+                    <script src="china.js"></script>
+                    <script src="map.js"></script>
+                </div>
+            </div>
+            <div id="right">
+                <!--
+                <p class ="result" id="result_hubei"></p>
+                <p class="result" id="result_zhejiang"></p>
+                -->
+                <p class="result">湖北疫情统计图</p>
+                <div id="line_hubei">
+                    <script src="map.js"></script>
+                </div>
+                <p class="result">浙江疫情统计图</p>
+                <div id="line_zhejiang">
+                    <script src="map.js"></script>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html> 
